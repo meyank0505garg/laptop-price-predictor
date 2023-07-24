@@ -1,6 +1,7 @@
 import streamlit as st
 import pickle
 import numpy as np
+import sklearn
 
 # import the model
 pipe = pickle.load(open('pipe.pkl','rb'))
@@ -44,6 +45,9 @@ gpu = st.selectbox('GPU',df['Gpu brand'].unique())
 os = st.selectbox('OS',df['os'].unique())
 
 if st.button('Predict Price'):
+    # st.title("Laptop Predictor")
+    pass
+
     # query
     ppi = None
     if touchscreen == 'Yes':
